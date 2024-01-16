@@ -4,6 +4,7 @@
 
 ```
 $ sudo apt-get install build-essential libc-ares-dev uuid-dev libssl-dev libmysqlclient-dev
+
   build-essential     // 빌드 가능할 라이브러리 설치 ( 여기서 gcc, make 등등 설치 합니다. )
 ```
 
