@@ -27,7 +27,7 @@ $ tar xvf mosquitto-2.0.18.tar.gz
 ## 4. make Mosquitto source
 
 ```
-$ cd ~/mosquitto_sources/mosquitto-1.4.8/
+$ cd ~/mosquitto_sources/mosquitto-2.0.18/
 $ make
 $ sudo make install
 ```
