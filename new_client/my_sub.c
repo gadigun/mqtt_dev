@@ -4,44 +4,9 @@
 #include <string.h>
 #include <stdlib.h>
 #include <stdbool.h>
-//#include <cstdarg.h>
 #include <memory.h>
 
 #include "mosquitto.h"
-#include "json.h"
-#include "vector.h"
-
-//using namespace std;
-
-/*
-std::string format(const char* format, ...)
-{
-    va_list args;
-    va_start(args, format);
-#ifndef _MSC_VER
-    size_t size = std::snprintf(nullptr, 0, format, args) + 1; // Extra space for '\0'
-    std::unique_ptr<char[]> buf(new char[size]);
-    std::vsnprintf(buf.get(), size, format, args);
-    return std::string(buf.get(), buf.get() + size - 1); // We don't want the '\0' inside
-#else
-    int size = _vscprintf(format, args);
-    std::string result(++size, 0);
-    vsnprintf_s((char*)result.data(), size, _TRUNCATE, format, args);
-    return result;
-#endif
-    va_end(args);
-}
-
-int main() {
-    float f = 3.f;
-    int i = 5;
-    std::string s = "hello!";
-    auto rs = format("i=%d, f=%f, s=%s", i, f, s.c_str());
-    printf("%s", rs.c_str());
-    return 0;
-}
-*/
-
 
 // 토큰 종류 열거형
 typedef enum _TOKEN_TYPE
@@ -178,8 +143,7 @@ void freeJSON(JSON* json)
 
 #define MQTT_HOSTNAME "mqtt.serviceport.co.kr"//"localhost"
 #define MQTT_PORT 1883
-#define MQTT_USERNAME "jin2jin2"//"admin"
-#define MQTT_PASSWORD "jin1234"//"admin"
+
 
 #define MQTT_TOPIC "oksystem/sw"
 
