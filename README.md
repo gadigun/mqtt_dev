@@ -3,17 +3,9 @@
 
 1. Linux 상에서 Mosquitto 소스코드를 Build 하기 위한 라이브러리를 설치한다.
 
-
-$ sudo apt-get install 
-  build-essential     // 빌드 가능할 라이브러리 설치 ( 여기서 gcc, make 등등 설치 합니다. )
-  libc-ares-dev 
-  uuid-dev 
-  libssl-dev 
-  libmysqlclient-dev
-
-
 $ sudo apt-get install build-essential libc-ares-dev uuid-dev libssl-dev libmysqlclient-dev
 
+  build-essential     // 빌드 가능할 라이브러리 설치 ( 여기서 gcc, make 등등 설치 합니다. )
 
 
 2. 만약 /var/lib/dpkg/lock 잠금 파일을 얻을 수 없다고 나온다면 다음과 같은 명령어를 통해 lock 파일 삭제를 진행한 후 다시 진행합니다.
