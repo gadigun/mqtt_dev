@@ -40,3 +40,7 @@ new_client 파일을 받아서 mosquitto-2.0.18 폴더 아래에 추가 합니�
 $sudo make
 
 $./my_sub 실행시키면 됩니다.
+
+
+
+참조 https://wnsgml972.github.io/mqtt/2018/02/13/mqtt_ubuntu-install/
