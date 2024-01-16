@@ -138,25 +138,10 @@ void freeJSON(JSON* json)
     }
 }
 
-//#define mqtt_host "localhost"
-//#define mqtt_port 1883
-
 #define MQTT_HOSTNAME "mqtt.serviceport.co.kr"//"localhost"
 #define MQTT_PORT 1883
 
-
 #define MQTT_TOPIC "oksystem/sw"
-
-#define TestMsg "{\"M\" : \"oksystem\", \"MID\" : 1234, \"T\" : 1, \"C\" : 10, \"SN\" : 0, \"SV\" : 0 }\n"
-#define TestMsg2 "{\"M\" : \"oksystem\", \"MID\" : 1234, \"T\" : 1, \"C\" : 10, \"SN\" : 1, \"SV\" : 0 }\n"
-#define TestRMsg "{\"M\" : \"oksystem\", \"MID\" : 50778b6477218162, \"T\" : 0, \"C\" : 10, \"SN\" : 0, \"SV\" : 1 }\n"
-
-#define TestRMsg2 "{\"M\" : \"oksystem\", \"MID\" : 50778b6477218162, \"T\" : 0, \"C\" : 10, \"SN\" : 1, \"SV\" : 1 }\n"
-#define TestRMsg_off "{\"M\" : \"oksystem\", \"MID\" : 50778b6477218162, \"T\" : 0, \"C\" : 10, \"SN\" : 0, \"SV\" : 0 }\n"
-
-// T 는 0 보내는거 , 1은 받는거 받은 후에는 0으로 변경 필요.
-//#define TestRmsg "{"\M"\:"\oksystem"\, "MID" : "50778b6477218162", "T" : "1", "C" : "10", "CIDX" : "13873", "SN" : "0", "SV" : "1"}\n"
-//#define TestTopic "oksystem/sw" //"DS-SO-00026/sw"
 
 static int run = 1;
 
@@ -335,7 +320,7 @@ int main(int argc, char* argv[])
     mosquitto_message_callback_set(mosq, message_callback);
     mosquitto_subscribe_callback_set(mosq, on_subscribe);
 
-    mosquitto_username_pw_set(mosq, MQTT_USERNAME, MQTT_PASSWORD);
+    mosquitto_username_pw_set(mosq, "jin2jin2", "");
 
     rc = mosquitto_connect(mosq, MQTT_HOSTNAME, MQTT_PORT, 60);//mosqutiio 서버와 연결
     if (rc != MOSQ_ERR_SUCCESS)
