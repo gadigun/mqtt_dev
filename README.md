@@ -62,3 +62,12 @@ export PATH=$PATH:/usr/arm-none-linux-gnueabi/bin
 추가
 
 
+tool chain old version
+https://launchpad.net/gcc-arm-embedded/+download?direction=backwards&start=10
+
+
+makefile 관련
+https://blog.naver.com/damhiya/220437112567
+
+CMake 관련
+https://www.tuwlab.com/ece/27234
