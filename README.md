@@ -45,3 +45,11 @@ $./my_sub 실행시키면 됩니다.
 
 
 https://github.com/jmattsson/freescale-imx-toolchain.git
+
+toolchain path setting
+
+// ubuntu 64 에서 32 bit 실행 하기 위한 작업
+sudo dpkg --add-architecture i386
+
+sudo apt-get update
+sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
