@@ -53,3 +53,12 @@ sudo dpkg --add-architecture i386
 
 sudo apt-get update
 sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386
+
+freescale-imx-toolchain 압축 풀고 /usr/bin/ 에 옮겨 넣는다. ( arm-none-linux-gnueabi 폴더를 )
+
+패스 등록 하고
+sudo vi /etc/profile
+export PATH=$PATH:/usr/arm-none-linux-gnueabi/bin
+추가
+
+
